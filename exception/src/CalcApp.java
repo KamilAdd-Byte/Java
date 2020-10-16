@@ -8,19 +8,25 @@ public class CalcApp {
 
         double x = 0;
         double y = 0;
-        String operator=null;
+        String operator = null;
 
-        boolean readComplete = true;
-        try {
-            System.out.println("Podaj 1 liczbę");
-            x = sc.nextDouble();
-            sc.nextLine();
-            System.out.println("Podaj 2 liczbę");
-            y = sc.nextDouble();
-            sc.nextLine();
-        }catch (RuntimeException runtimeException){
-            System.out.println("Coś poszło nie tak");
+        boolean readComplete = false;
+
+        while (!readComplete ){
+            try {
+                System.out.println("Podaj 1 liczbę");
+                x = sc.nextDouble();
+                sc.nextLine();
+                System.out.println("Podaj 2 liczbę");
+                y = sc.nextDouble();
+                sc.nextLine();
+            }catch (RuntimeException runtimeException){
+                System.out.println("Coś poszło nie tak");
+            }
+
+
         }
+
 
     }
 }
