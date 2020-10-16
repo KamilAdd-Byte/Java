@@ -9,22 +9,15 @@ public class Calculator {
         double result = 0;
 
         switch (operator) {
-            case PLUS:
-                result = x + y;
-                break;
-            case MINUS:
-                result = x - y;
-                break;
-            case MULTIPLY:
-                result = x * y;
-                break;
-            case DIVIDE:
+            case PLUS -> result = x + y;
+            case MINUS -> result = x - y;
+            case MULTIPLY -> result = x * y;
+            case DIVIDE -> {
                 if (y == 0)
                     throw new ArithmeticException("Nie dziel przez ZERO");
                 result = x / y;
-                break;
-            default:
-                throw new UnknowOperationExeption("Wykorzystujesz niezdefiniowany operator arytmetyczny");
+            }
+            default -> throw new UnknowOperationExeption("Wykorzystujesz niezdefiniowany operator arytmetyczny");
         }
             return result;
     }
