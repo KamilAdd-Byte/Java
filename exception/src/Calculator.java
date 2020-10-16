@@ -5,7 +5,7 @@ public class Calculator {
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
 
-    double calculate(double x, double y, String operator) {
+    static double calculate(double x, double y, String operator) {
         double result = 0;
 
         switch (operator) {
@@ -19,7 +19,7 @@ public class Calculator {
             }
             default -> throw new UnknowOperationExeption("Wykorzystujesz niezdefiniowany operator arytmetyczny");
         }
-            return result;
+        return result;
     }
 }
 
