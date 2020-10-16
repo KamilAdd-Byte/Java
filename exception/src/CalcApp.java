@@ -20,6 +20,7 @@ public class CalcApp {
                 System.out.println("Podaj 2 liczbę");
                 y = sc.nextDouble();
                 sc.nextLine();
+                readComplete = true;
             }catch (RuntimeException runtimeException){
                 System.out.println("Coś poszło nie tak");
             }
