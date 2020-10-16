@@ -28,7 +28,13 @@ public class CalcApp {
                 sc.nextLine();
             }
         }
-        double result = Calculator.calculate(x,y,operator);
-        System.out.println(x + operator + y + "= " + result);
+        try {
+            double result = Calculator.calculate(x,y,operator);
+            System.out.println(x + operator + y + "= " + result);
+        }catch (UnknowOperationExeption exeption){
+            System.err.println(exeption.getMessage());
+            System.out.println("Nie udało się obliczyć wyniku z takim operatorem");
+        }
+
     }
 }
