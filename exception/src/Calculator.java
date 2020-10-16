@@ -4,10 +4,11 @@ public class Calculator {
     private static final String MINUS = "-";
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
-    double calculate(double x,double y,String operator){
+
+    double calculate(double x, double y, String operator) {
         double result = 0;
 
-        switch (operator){
+        switch (operator) {
             case PLUS:
                 result = x + y;
                 break;
@@ -23,9 +24,9 @@ public class Calculator {
                 result = x / y;
                 break;
             default:
-
+                throw new UnknowOperationExeption("Wykorzystujesz niezdefiniowany operator arytmetyczny");
         }
-
+            return result;
     }
-
 }
+
