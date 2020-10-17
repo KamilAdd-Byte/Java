@@ -10,6 +10,10 @@ public class CalcApp {
         double y = 0;
         String operator = null;
 
+        CalculateStatic(sc, x, y, operator);
+    }
+
+    private static void CalculateStatic(Scanner sc, double x, double y, String operator) {
         boolean readComplete = false;
 
         while (!readComplete) {
@@ -29,12 +33,11 @@ public class CalcApp {
             }
         }
         try {
-            double result = Calculator.calculate(x,y,operator);
+            double result = Calculator.calculate(x, y, operator);
             System.out.println(x + operator + y + "= " + result);
         }catch (UnknowOperationExeption exeption){
             System.err.println(exeption.getMessage());
             System.out.println("Nie udało się obliczyć wyniku z takim operatorem");
         }
-
     }
 }
