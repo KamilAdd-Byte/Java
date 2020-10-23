@@ -1,3 +1,5 @@
+
+
 public class Chains {//Łańcuchy
 
     public static void main(String[] args) {
@@ -28,5 +30,4 @@ public class Chains {//Łańcuchy
         }else
             System.out.println("Łańcuch zawiera znaki");
     }
-
 }
